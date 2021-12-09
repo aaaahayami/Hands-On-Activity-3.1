@@ -2,13 +2,13 @@
 - name: install vsftpd on ubuntu
   apt:
     name: vsftpd
-    state: present
+    state: latest
   when: ansible_distribution == "Ubuntu"
 
 - name: install vsftpd on centos
   dnf:
     name: vsftpd
-    state: present
+    state: latest
   when: ansible_distribution == "CentOS"
 
 

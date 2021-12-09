@@ -2,11 +2,13 @@
   - name: install dhcpd for ubuntu
     apt: 
       name: isc-dhcp-server
+      state: latest
     when: ansible_distribution == "Ubuntu"
 
   - name: install dhcpd for centos
     dnf: 
       name: dhcp-server
+      state: latest
     when: ansible_distribution == "CentOS"
 
 
