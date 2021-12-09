@@ -1,8 +1,12 @@
 # Hands-On-Activity-3.1
-Casile, Abegail B.
+Casile, Abegail
+
 Dequilla, Mikaela
+
 Edrosolo, Asher Ben
+
 Licudan, Jorayne Alieza
+
 Toraja, Alven
 
 In Hands On Activity 3.1, we need to install different web services, such as dhcpd, bind9, vsftpd, samba, httpd, mariadb in two machines, both Ubuntu and CentOS.
