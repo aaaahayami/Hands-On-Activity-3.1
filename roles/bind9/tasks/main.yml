@@ -1,2 +1,12 @@
----
 # tasks file for bind9
+  - name: install bind9 for ubuntu
+    apt:
+      name: bind9
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+  - name: install bind9 for centos
+    dnf:
+      name: bind-utils
+      state: latest
+    when: ansible_distribution == "CentOS"

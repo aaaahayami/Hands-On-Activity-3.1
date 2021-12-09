@@ -1,2 +1,10 @@
----
 # tasks file for httpd
+  - name: install apache for ubuntu
+    apt:
+      name: apache2
+    when: ansible_distribution == "Ubuntu"
+
+  - name: install httpd for centos
+    dnf:
+      name: httpd
+    when: ansible_distribution == "CentOS"
