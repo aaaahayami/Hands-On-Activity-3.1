@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: install samba on ubuntu
+      apt:
+        name: samba
+        state: latest
+      when: ansible_distribution == "Ubuntu"
+
+    - name: install samba on centos
+      dnf:
+        name: samba
+        state: latest
+      when: ansible_distribution == "CentOS"
+
