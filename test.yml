@@ -2,15 +2,15 @@
 - hosts: all
   become: true
   tasks:
-    - name: install bind9 on ubuntu
+    - name: install samba on ubuntu
       apt:
-        name: bind-utils
+        name: samba
         state: latest
       when: ansible_distribution == "Ubuntu"
 
-    - name: install bind9 on centos
+    - name: install samba on centos
       dnf:
-        name: bind-utils
+        name: samba
         state: latest
       when: ansible_distribution == "CentOS"
 

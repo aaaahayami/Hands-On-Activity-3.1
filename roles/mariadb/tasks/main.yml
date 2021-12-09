@@ -1,11 +1,11 @@
 # tasks file for mariadb
 - name: install mariadb on ubuntu
   apt:
-    name: mariadb
+    name: mariadb-server
     state: latest
   when: ansible_distribution == "Ubuntu"
 
-- name: install mariadb on ubuntu
+- name: install mariadb on centos
   dnf:
     name: mariadb
     state: latest

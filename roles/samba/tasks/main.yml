@@ -1,2 +1,12 @@
----
 # tasks file for samba
+  - name: install samba for ubuntu
+    apt:
+      name: samba
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+  - name: install samba for centos
+    dnf:
+      name: samba
+      state: latest
+    when: ansible_distribution == "CentOS"
