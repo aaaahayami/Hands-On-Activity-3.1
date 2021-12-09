@@ -1,0 +1,31 @@
+---
+- hosts: all
+  become: true
+  name: install dhcpd for ubuntu and centos
+  roles:
+    - dhcpd
+
+- hosts: all
+  become: true
+  name: install mariadb for ubuntu and centos
+  roles:
+    - mariadb
+
+- hosts: all
+  become: true
+  name: install vsftpd for ubuntu and centos
+  roles:
+    - vsftpd
+
+- hosts: all
+  become: true
+  name: install bind9 for ubuntu and centos
+  roles:
+    - bind9
+
+- hosts: all
+  become: true
+  name: install httpd for ubuntu and centos
+  roles:
+    - httpd
+

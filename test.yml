@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: install bind9 on ubuntu
+      apt:
+        name: bind-utils
+        state: latest
+      when: ansible_distribution == "Ubuntu"
+
+    - name: install bind9 on centos
+      dnf:
+        name: bind-utils
+        state: latest
+      when: ansible_distribution == "CentOS"
+
